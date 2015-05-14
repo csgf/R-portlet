@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+
+<portlet-app
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+	<portlet>
+		<portlet-name>R-portlet</portlet-name>
+		<display-name>R-portlet</display-name>
+		<portlet-class>it.infn.ct.R_portlet</portlet-class>
+
+		<!--
+                     Application init parameters
+                -->
+                <init-param>
+                        <name>portletVersion</name>
+                        <value>1.0</value>
+                </init-param>
+                <init-param>
+                        <name>logLevel</name>
+                        <value>info</value>
+                </init-param>
+		 <init-param>
+                        <name>sciGwyAppId</name>
+                        <value>88</value>
+                </init-param>
+		<!-- Infrastructure settings (begin)
+			
+			Infrastructure parameters can be specified prefixing
+			the name with the infrastructure number: n_<property>
+			Multi-infrastructure uses the follwing fields mappings:
+			
+				UNICORE:
+					x_acronymInfrastructure (must be 'unicore')
+					x_bdiiHost = '<keystore>;<password>'
+					x_wmsHosts = '<JSAGA adaptor>'
+					* other settings are unused
+				GARUDA:
+					x_acronymInfrastructure (must be 'garuda')
+					x_pxServerHost = 'Robot proxy server Host'
+					x_pxServerPort = 'Robot proxy server Port'
+					x_pxRobotId    = 'Robot proxy identifier'
+					x_pxRobotVO    = 'Group'
+					1_pxRobotRole  = 'Role'
+					* other settings are unused
+				OURGRID:
+					x_acronymInfrastructure (must be 'ourgrid')
+					x_bdiiHost = '<username>;<password>'
+					x_wmsHosts = '<JSAGA adaptor>'
+					* other settings are unused
+				
+			(!) In case the acronym does not match with the values
+			    specified above; the infrastructure values will be
+			    interpreted as gLite middleware settings
+		-->
+		<init-param>
+			<name>numInfrastructures</name>
+			<value>6</value>
+		</init-param>
+
+		<!--
+			1st Infrastructure EUMED
+		-->
+		<init-param>
+			<name>1_enableInfrastructure</name>
+			<value>yes</value>
+		</init-param>
+		<init-param>
+			<name>1_nameInfrastructure</name>
+			<value>EUMEDGRID-Support infrastructure</value>
+		</init-param>
+		<init-param>
+			<name>1_acronymInfrastructure</name>
+			<value>EUMEDGRID</value>
+		</init-param>
+		<init-param>
+			<name>1_bdiiHost</name>
+			<value>ldap://bdii.eumedgrid.eu:2170</value>
+		</init-param>
+		<init-param>
+			<name>1_wmsHosts</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>1_pxServerHost</name>
+			<value>etokenserver.ct.infn.it</value>
+		</init-param>
+		<init-param>
+			<name>1_pxServerPort</name>
+			<value>8082</value>
+		</init-param>
+		<init-param>
+			<name>1_pxServerSecure</name>
+			<value>false</value>
+		</init-param>
+		<init-param>
+			<name>1_pxRobotId</name>
+			<value>bc681e2bd4c3ace2a4c54907ea0c379b</value>
+		</init-param>
+		<init-param>
+			<name>1_pxRobotVO</name>
+			<value>eumed</value>
+		</init-param>
+		<init-param>
+			<name>1_pxRobotRole</name>
+			<value>eumed</value>
+		</init-param>
+		<init-param>
+			<name>1_pxRobotRenewalFlag</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>1_pxUserProxy</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>1_softwareTags</name>
+			<value>VO-eumed-prod-R-2.14.1-1-SL5-x86_64-gccany</value>
+		</init-param>
+
+		<!--
+			2nd Infrastructure GRIDIT
+		-->
+		<init-param>
+			<name>2_nameInfrastructure</name>
+			<value>GridIt Italian Grid Infrastructure</value>
+		</init-param>
+		<init-param>
+			<name>2_acronymInfrastructure</name>
+			<value>GridIt</value>
+		</init-param>
+		<init-param>
+			<name>2_bdiiHost</name>
+			<value>ldap://egee-bdii.cnaf.infn.it:2170</value>
+		</init-param>
+		<init-param>
+			<name>2_enableInfrastructure</name>
+			<value>yes</value>
+		</init-param>
+		<init-param>
+			<name>2_wmsHosts</name>
+			<value>wms://wms014.cnaf.infn.it:7443/glite_wms_wmproxy_server</value>
+		</init-param>
+		<init-param>
+			<name>2_pxServerHost</name>
+			<value>etokenserver.ct.infn.it</value>
+		</init-param>
+		<init-param>
+			<name>2_pxServerPort</name>
+			<value>8082</value>
+			</init-param>
+		<init-param>
+			<name>2_pxServerSecure</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>2_pxRobotId</name>
+			<value>332576f78a4fe70a52048043e90cd11f</value>
+		</init-param>
+		<init-param>
+			<name>2_pxRobotVO</name>
+			<value>gridit</value>
+		</init-param>
+		<init-param>
+			<name>2_pxRobotRole</name>
+			<value>gridit</value>
+		</init-param>
+		<init-param>
+			<name>2_pxRobotRenewalFlag</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>2_pxUserProxy</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>2_softwareTags</name>
+			<value>VO-gridit-prod-R-2.14.1-1-SL5-x86_64-gccany</value>
+		</init-param>
+
+		<!--
+			3rd Infrastructure parameters
+		-->
+		<init-param>
+			<name>3_enableInfrastructure</name>
+			<value>no</value>
+		</init-param>
+		<init-param>
+			<name>3_nameInfrastructure</name>
+			<value>GISELA Latin american infrastructure</value>
+		</init-param>
+		<init-param>
+			<name>3_acronymInfrastructure</name>
+			<value>GISELA</value>
+		</init-param>
+		<init-param>
+			<name>3_bdiiHost</name>
+			<value>ldap://top-bdii.grid.unam.mx:2170</value>
+		</init-param>
+		<init-param>
+			<name>3_wmsHosts</name>
+			<value>wms://wms-lb.grid.unam.mx:7443/glite_wms_wmproxy_server</value>
+		</init-param>
+		<init-param>
+			<name>3_pxServerHost</name>
+			<value>etokenserver.ct.infn.it</value>
+		</init-param>
+		<init-param>
+			<name>3_pxServerPort</name>
+			<value>8082</value>
+		</init-param>
+		<init-param>
+			<name>3_pxServerSecure</name>
+			<value>false</value>
+		</init-param>
+		<init-param>
+			<name>3_pxRobotId</name>
+			<value>3258454c30c8d5f7c6d4440ff19d2999</value>
+		</init-param>
+		<init-param>
+			<name>3_pxRobotVO</name>
+			<value>prod.vo.eu-eela.eu</value>
+		</init-param>
+		<init-param>
+			<name>3_pxRobotRole</name>
+			<value>prod.vo.eu-eela.eu</value>
+		</init-param>
+		<init-param>
+			<name>3_pxRobotRenewalFlag</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>3_pxUserProxy</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>3_softwareTags</name>
+			<value>VO-prod.vo.eu-eela.eu-R-2.13.1</value>
+		</init-param>
+		
+		<!-- Multi-middleware (begin) -->
+		
+		<!--
+			Infrastructure #4 (Multi-middleware: UNICORE)
+		-->
+		<init-param>
+			<name>4_nameInfrastructure</name>
+			<value>UNICORE infrastructure</value>
+		</init-param>
+		<init-param>
+			<name>4_acronymInfrastructure</name>
+			<value>unicore</value>
+		</init-param>
+		<init-param>
+			<name>4_bdiiHost</name>
+			<value>/tmp/robot2012.jks;robot2012</value>
+		</init-param>
+		<init-param>
+			<name>4_enableInfrastructure</name>
+			<value>no</value>
+		</init-param>
+		<init-param>
+			<name>4_wmsHosts</name>
+			<value>unicore://zam052v01.zam.kfa-juelich.de:8080/?Target=EMI-UNICOREX;unicore://zam052v02.zam.kfa-juelich.de:8080/?Target=EMI-UNICOREX-RC</value>
+		</init-param>
+		<init-param>
+			<name>4_pxServerHost</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_pxServerPort</name>
+			<value></value>
+			</init-param>
+		<init-param>
+			<name>4_pxServerSecure</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_pxRobotId</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_pxRobotVO</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_pxRobotRole</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_pxRobotRenewalFlag</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>4_softwareTags</name>
+			<value></value>
+		</init-param>
+
+		<!--
+			Infrastructure #5 (Multi-middleware: GARUDA)
+		-->
+		<init-param>
+			<name>5_nameInfrastructure</name>
+			<value>GARUDA infrastructure</value>
+		</init-param>
+		<init-param>             
+			<name>5_acronymInfrastructure</name>
+			<value>garuda</value>
+		</init-param>
+		<init-param>    
+			<name>5_bdiiHost</name>
+			<value>/tmp/usercert.jks;powerofliotru</value>
+		</init-param>
+		<init-param>
+			<name>5_enableInfrastructure</name>
+			<value>no</value>
+		</init-param>
+		<init-param>    
+			<name>5_wmsHosts</name>
+			<value>wsgram://xn03.ctsf.cdacb.in:8443/GW</value>
+		</init-param>
+		<init-param>
+			<name>5_pxServerHost</name>
+			<value>etokenserver.ct.infn.it</value>
+		</init-param>
+		<init-param>
+			<name>5_pxServerPort</name>
+			<value>8082</value>
+			</init-param>
+		<init-param>
+			<name>5_pxServerSecure</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>5_pxRobotId</name>
+			<value>22002</value>
+		</init-param>
+		<init-param>
+			<name>5_pxRobotVO</name>
+			<value>gridit</value>
+		</init-param>
+		<init-param>
+			<name>5_pxRobotRole</name>
+			<value>gridit</value>
+		</init-param>
+		<init-param>
+			<name>5_pxRobotRenewalFlag</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>5_softwareTags</name>
+			<value></value>
+		</init-param>
+		
+		<!--
+			Infrastructure #6 (Multi-middleware: OurGrid)
+		-->
+		<init-param>
+			<name>6_nameInfrastructure</name>
+			<value>OurGrid infrastructure</value>
+		</init-param>
+		<init-param>             
+			<name>6_acronymInfrastructure</name>
+			<value>ourgrid</value>
+		</init-param>
+		<init-param>    
+			<name>6_bdiiHost</name>
+			<value>diego;scardaci</value>
+		</init-param>
+		<init-param>
+			<name>6_enableInfrastructure</name>
+			<value>no</value>
+		</init-param>
+		<init-param>    
+			<name>6_wmsHosts</name>
+			<value>ourgrid://api.ourgrid.org</value>
+		</init-param>
+		<init-param>
+			<name>6_pxServerHost</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_pxServerPort</name>
+			<value></value>
+			</init-param>
+		<init-param>
+			<name>6_pxServerSecure</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_pxRobotId</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_pxRobotVO</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_pxRobotRole</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_pxRobotRenewalFlag</name>
+			<value></value>
+		</init-param>
+		<init-param>
+			<name>6_softwareTags</name>
+			<value></value>
+		</init-param>
+		
+		<!-- Multi-middleware (end) -->
+		<!-- Infrastructure settings (end) -->
+
+		<init-param>
+			<name>sciGwyUserTrackingDB_Hostname</name>
+			<value>localhost</value>
+		</init-param>
+		<init-param>
+			<name>sciGwyUserTrackingDB_Username</name>
+			<value>tracking_user</value>
+		</init-param>
+		<init-param>
+			<name>sciGwyUserTrackingDB_Password</name>
+			<value>usertracking</value>
+		</init-param>
+		<init-param>
+			<name>sciGwyUserTrackingDB_Database</name>
+			<value>userstracking</value>
+		</init-param>
+		<init-param>    
+			<name>jobRequirements</name>
+			<value></value>
+		</init-param>            
+		<init-param>    
+			<name>pilotScript</name>
+			<value>pilot_script.sh</value>
+		</init-param>
+		<init-param>
+			<name>pxUserProxy</name>
+			<value></value>
+		</init-param>		
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>edit</portlet-mode>
+			<portlet-mode>help</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>R-portlet</title>
+			<short-title>R-portlet</short-title>
+			<keywords>R-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>
