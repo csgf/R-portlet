@@ -9,7 +9,7 @@ Installation
 Following instructions are meant for science gateway maintainers while generic users can skip this section.
 To install the portlet it is enough to install the war file into the application server and then configure the infrastructure settings into the portlet preferences pane.
 
- ..image:: images/preferences.png
+.. image:: images/preferences.png
 
 Preferences are splitted in three separate parts: Generic, Infrastructures and the application execution setting. 
 The generic part contains the **Log level** which contains one of following values, sorted by decreasing level: info, debug, warning and error. 
@@ -44,7 +44,7 @@ Following buttons: Demo, Submit, Reset values and About are respectively:
  *Reset* - Resets the input form
  *About* - Gives an overview of the portlet
 
-  .. image:: images/input.png
+.. image:: images/input.png
 
 
 ============
