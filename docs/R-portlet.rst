@@ -40,8 +40,11 @@ The **job identifier** text is a human readable values that users will use to ke
 Following buttons: Demo, Submit, Reset values and About are respectively:
 
  *Demo* - Fills the Macro Text box with an R-Macro example
+
  *Submit* - Executes the given macro on the distributed infrastructure
+
  *Reset* - Resets the input form
+
  *About* - Gives an overview of the portlet
 
 .. image:: images/input.png
