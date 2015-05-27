@@ -9,8 +9,6 @@ Installation
 Following instructions are meant for science gateway maintainers while generic users can skip this section.
 To install the portlet it is enough to install the war file into the application server and then configure the infrastructure settings into the portlet preferences pane.
 
-.. image:: images/preferences.png
-
 Preferences are splitted in three separate parts: Generic, Infrastructures and the application execution setting. 
 The generic part contains the **Log level** which contains one of following values, sorted by decreasing level: info, debug, warning and error. 
 The **Application Identifier** refers to theId field value of the GridEngine 'UsersTracking'database table: GridInteractions.
@@ -29,6 +27,8 @@ The infrastructure part consists of different settings related to the destinatio
  **Robot Proxy values**: This is a collection of several values which configures the robot proxy settings (Host, Port, proxyID, VO, Role, proxy renewal);
 
  **Job requirements**: This field contains the necessary statements to specify a job execution requirement, such as a particular software, a particular number of CPUs/RAM, etc.
+
+.. image:: images/preferences.png
 
 Actually, depending on the infrastructure, some of the fields above have an overloaded meaning. Please contact the support for further information or watch existing production portlet settings.
 
