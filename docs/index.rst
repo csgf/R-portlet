@@ -1,5 +1,5 @@
 *********************
-Octave
+R - Statistical Computing
 *********************
 
 ============
@@ -58,12 +58,6 @@ Following buttons: Demo, Submit, Reset values and About are respectively:
  *About* - Gives an overview of the portlet
 
 .. image:: images/input.png
-
-
-============
-Support
-============
-To get support such as reporting a bug, a problem or even request new features, please contact `Riccardo Bruno <mailto:riccardo.bruno@ct.infn.it>`_
 
 ============
 Support
