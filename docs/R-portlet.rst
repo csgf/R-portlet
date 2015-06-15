@@ -1,6 +1,16 @@
+*********************
+Octave
+*********************
+
 ============
 About
 ============
+
+.. image:: images/AppLogo.png
+   :align: left
+   :target: http://www.gnu.org/software/octave/
+-------------
+
 R is a language and environment for statistical computing and graphics. It is a GNU project which is similar to the S language and environment which was developed at Bell Laboratories (formerly AT&amp;T, now Lucent Technologies) by John Chambers and colleagues. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R. R provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, ...) and graphical techniques, and is highly extensible. The S language is often the vehicle of choice for research in statistical methodology, and R provides an Open Source route to participation in that activity. One of R’s strengths is the ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control. R is available as Free Software under the terms of the Free Software Foundation’s GNU General Public License in source code form. It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
 
 ============
@@ -53,4 +63,31 @@ Following buttons: Demo, Submit, Reset values and About are respectively:
 ============
 Support
 ============
-To get support such as report a bug, a problem or even request new features, please contact `Riccardo Bruno <mailto:riccardo.bruno@ct.infn.it>`_
+To get support such as reporting a bug, a problem or even request new features, please contact `Riccardo Bruno <mailto:riccardo.bruno@ct.infn.it>`_
+
+============
+Support
+============
+To get support such as reporting a bug, a problem or even request new features, please contact
+
+.. _INFN: http://www.ct.infn.it/
+
+:Authors:
+ 
+ `Roberto BARBERA <mailto:roberto.barbera@ct.infn.it>`_ - Italian National Institute of Nuclear Physics (INFN_),
+ 
+ `Riccardo BRUNO <mailto:riccardo.bruno@ct.infn.it>`_ - Italian National Institute of Nuclear Physics (INFN_),
+
+ 
+:Version: v1.0
+
+
+
+
+
+
+
+
+
+
+
