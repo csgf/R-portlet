@@ -60,7 +60,7 @@ Following buttons: Demo, Submit, Reset values and About are respectively:
 .. image:: images/input.png
 
 ============
-Support
+Contributor(s)
 ============
 To get support such as reporting a bug, a problem or even request new features, please contact
 
@@ -72,8 +72,6 @@ To get support such as reporting a bug, a problem or even request new features, 
  
  `Riccardo BRUNO <mailto:riccardo.bruno@ct.infn.it>`_ - Italian National Institute of Nuclear Physics (INFN_),
 
- 
-:Version: v1.0
 
 
 
