@@ -43,7 +43,6 @@ before_install:
 # Building the R-portlet 
 install:
  - cd liferay-plugins-sdk-6.1.1/portlets/R-portlet
- #- sudo ant all
 
 notifications:
   email:
